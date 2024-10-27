@@ -1,10 +1,8 @@
 package guru.springframework.sfg_di_mert.controllers;
 
-import guru.springframework.sfg_di_mert.services.GreetingServiceImpl;
+import guru.springframework.sfg_di_mert.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
     PropertyInjectedController controller;
@@ -12,7 +10,7 @@ class PropertyInjectedControllerTest {
     void setUp() {
 
         controller = new PropertyInjectedController();
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
     }
 
     @Test
