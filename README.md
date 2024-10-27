@@ -1,3 +1,4 @@
 - Understanding Spring IoC(Inversion of Control) Container (=ApplicationContext)
-- Application Context default bean naming convention (=in SfgDiMertApplication Class)
-- Dependency Injection without Spring in test classes (PropertyInjectedControllerTest,SetterInjectedControllerTest,ConstructorInjectedControllerTest). Mimicking what the ApplicationContext does.
+- Default bean naming convention in Application Context(=in SfgDiMertApplication Class)
+- Dependency Injection without Spring in test classes through JUNit5 test(PropertyInjectedControllerTest,SetterInjectedControllerTest,ConstructorInjectedControllerTest). Mimicking what the ApplicationContext does.
+- Dependency Injection in ApplicationContext with stereotypes(=PropertyInjectedController, SetterInjectedConttoller, ConstructorInjectedController, GreetingServiceImpl). 
