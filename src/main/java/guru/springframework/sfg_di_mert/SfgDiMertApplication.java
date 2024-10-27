@@ -1,9 +1,6 @@
 package guru.springframework.sfg_di_mert;
 
-import guru.springframework.sfg_di_mert.controllers.ConstructorInjectedController;
-import guru.springframework.sfg_di_mert.controllers.MyController;
-import guru.springframework.sfg_di_mert.controllers.PropertyInjectedController;
-import guru.springframework.sfg_di_mert.controllers.SetterInjectedController;
+import guru.springframework.sfg_di_mert.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,12 +12,13 @@ public class SfgDiMertApplication {
 
         ApplicationContext ctx = SpringApplication.run(SfgDiMertApplication.class, args);
 
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
+
+
         MyController myController = (MyController) ctx.getBean("myController");
-
         System.out.println("--------- Primary Bean");
-
         System.out.println(myController.sayHello());
-
 
 
         System.out.println("--------- Property DI");
