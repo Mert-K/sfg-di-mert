@@ -1,0 +1,3 @@
+- Understanding Spring IoC(Inversion of Control) Container (=ApplicationContext)
+- Application Context default bean naming convention (=in SfgDiMertApplication Class)
+- Dependency Injection without Spring in test classes (PropertyInjectedControllerTest,SetterInjectedControllerTest,ConstructorInjectedControllerTest). Mimicking what the ApplicationContext does.
