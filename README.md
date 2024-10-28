@@ -6,3 +6,4 @@
 - Using Primary annotation at service implementation (=PrimaryGreetingService). 
 - Using Profile annotation to create beans only with active profiles (I18nEnglishGreetingService, I18nSpanishGreetingService, testing in I18nController).
 - Using default Profile
+- Using Multiple Active Profile
