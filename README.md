@@ -7,3 +7,7 @@
 - Using Profile annotation to create beans only with active profiles (I18nEnglishGreetingService, I18nSpanishGreetingService, testing in I18nController).
 - Using default Profile
 - Using Multiple Active Profile
+- Using Annotation Based Configuration
+- Using Java Based Configuration
+- Using XML Based Configuration
+- Using ComponentScan annotation
