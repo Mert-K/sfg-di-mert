@@ -1,5 +1,7 @@
 package guru.springframework.sfg_di_mert.config;
 
+import com.springframework.pets.PetService;
+import com.springframework.pets.PetServiceFactory;
 import guru.springframework.sfg_di_mert.repositories.EnglishGreetingRepository;
 import guru.springframework.sfg_di_mert.repositories.EnglishGreetingRepositoryImpl;
 import guru.springframework.sfg_di_mert.services.*;
@@ -10,6 +12,23 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class GreetingServiceConfig {
+
+    @Bean
+    PetServiceFactory petServiceFactory(){
+        return new PetServiceFactory();
+    }
+
+    @Bean
+    @Profile({"dog","default"})
+    PetService dogPetService(PetServiceFactory petServiceFactory){
+        return petServiceFactory.getPetService("dog");
+    }
+
+    @Bean
+    @Profile("cat")
+    PetService catPetService(PetServiceFactory petServiceFactory){
+        return petServiceFactory.getPetService("cat");
+    }
 
     @Bean("i18nService")
     @Profile({"ES","default"})
