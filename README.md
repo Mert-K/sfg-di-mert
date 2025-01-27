@@ -11,3 +11,4 @@
 - Using Java Based Configuration
 - Using XML Based Configuration
 - Using ComponentScan annotation
+- Spring Bean Scope
