@@ -1,6 +1,7 @@
 package guru.springframework.sfg_di_mert;
 
 import guru.springframework.sfg_di_mert.config.SfgConfiguration;
+import guru.springframework.sfg_di_mert.config.SfgConstructorConfig;
 import guru.springframework.sfg_di_mert.controllers.*;
 import guru.springframework.sfg_di_mert.datasource.FakeDataSource;
 import guru.springframework.sfg_di_mert.services.PrototypeBean;
@@ -67,6 +68,12 @@ public class SfgDiMertApplication {
         System.out.println(sfgConfiguration.getUsername());
         System.out.println(sfgConfiguration.getPassword());
         System.out.println(sfgConfiguration.getJdbcurl());
+
+        System.out.println("------------- Constructor Binding");
+        SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+        System.out.println(sfgConstructorConfig.getUsername());
+        System.out.println(sfgConstructorConfig.getPassword());
+        System.out.println(sfgConstructorConfig.getJdbcurl());
 
     }
 
